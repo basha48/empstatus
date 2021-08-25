@@ -1,7 +1,7 @@
 #! /bin/bash
 
 
-totaldays=20;
+totaldays=21;
 
 wageperhour=20
 sum=0
@@ -22,12 +22,14 @@ then
 
 count=$(($count+1));
 empwage[$i]=$calculatewage
+else
+empwage[$i]=0
+
 
 fi
 
 
 done
-#echo "${empwage[@]}"
 
 
 
@@ -38,8 +40,7 @@ sum=`expr $sum + $j`
 
 done
 
-
+echo "over all daily wages per day is ${empwage[@]} "
 echo "out of 20 working days no of present days are: $count"
 echo "salary for $count days are :" $sum
-
 
